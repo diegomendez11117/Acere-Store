@@ -18,6 +18,8 @@ import { MatSidenavModule } from "@angular/material/sidenav";
 import { LayoutModule } from "@angular/cdk/layout";
 import { MatListModule } from "@angular/material/list";
 import { MatStepperModule } from "@angular/material/stepper";
+import { FlexLayoutModule } from "@angular/flex-layout";
+import { HighchartsChartModule } from "highcharts-angular";
 
 @NgModule({
   declarations: [],
@@ -40,6 +42,8 @@ import { MatStepperModule } from "@angular/material/stepper";
     LayoutModule,
     MatListModule,
     MatStepperModule,
+    FlexLayoutModule,
+    HighchartsChartModule
   ],
   exports: [
     MatButtonModule,
@@ -59,6 +63,8 @@ import { MatStepperModule } from "@angular/material/stepper";
     LayoutModule,
     MatListModule,
     MatStepperModule,
+    FlexLayoutModule,
+    HighchartsChartModule,
   ],
 })
 export class MaterialModule {}

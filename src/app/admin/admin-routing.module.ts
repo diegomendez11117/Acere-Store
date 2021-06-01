@@ -1,43 +1,38 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { ProductFormComponent } from './components/product-form/product-form.component';
-import { NavComponent } from './components/nav/nav.component';
-
-import { TableComponent } from './components/table/table.component';
-import { ProductListComponent } from './components/product-list/product-list.component';
-import { FormProductComponent } from './components/form-product/form-product.component';
-import { ProductEditComponent } from './components/product-edit/product-edit.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { DefaultComponent } from './components/default/default.component';
+import { PostsComponent } from './components/posts/posts.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: NavComponent,
+    component: DefaultComponent,
     children: [
       {
-        path: 'create',
-        component: ProductFormComponent
+        path: '',
+        component: DashboardComponent
       },
       {
-        path: 'products/edit/:id',
-        component: ProductEditComponent
+        path: 'posts',
+        component: PostsComponent
       },
-      // {
-      //   path: '',
-      //   component: DashboardComponent
-      // },
-      {
-        path: 'table',
-        component: TableComponent
-      },
-      {
-        path: 'products',
-        component: ProductListComponent
-      },   
-      {
-        path: 'products/create',
-        component: FormProductComponent
-      }, 
+    //   {
+    //     path: '',
+    //     component: DashboardComponent
+    //   },
+    //   {
+    //     path: 'table',
+    //     component: TableComponent
+    //   },
+    //   {
+    //     path: 'products',
+    //     component: ProductListComponent
+    //   },   
+    //   {
+    //     path: 'products/create',
+    //     component: FormProductComponent
+    //   }, 
       
     ]
   },  
