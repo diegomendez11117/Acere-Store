@@ -1,0 +1,56 @@
+<mat-toolbar class="header-toolbar" color="primary">
+  <mat-toolbar-row>
+    <div class="container">
+      <div class="row between-xs middle-xs header-row">
+        <nav>
+          <a [routerLink]="['/']"><img src="../../../../assets/images/earth.png" width="40px"></a>
+          <button mat-button routerLink="/home" routerLinkActive="active">Home</button>
+          <button mat-button routerLink="/products" routerLinkActive="active"
+            >Products</button
+          >
+          <button mat-button routerLink="/info/contact" routerLinkActive="active"
+            >Contact</button
+          >
+          <button mat-button routerLink="/info/about" routerLinkActive="active"
+            >About Us</button
+          >
+        </nav>
+        <div class="">
+          <button
+            *ngIf="!logged()"
+            mat-button
+            routerLink="/auth/login"
+            routerLinkActive="active"
+          >
+            Sign In
+          </button> 
+          <button
+            *ngIf="logged()"
+            mat-button
+            routerLink="/admin"
+            routerLinkActive="active"
+          >
+            Dashboard
+          </button>         
+          <button
+            *ngIf="logged()"
+            (click)="logout()"
+            mat-button
+            routerLinkActive="active"
+          >
+            Log Out
+          </button>
+          <a            
+            routerLink="/order"
+            mat-raised-button
+            [matBadge]="total$ | async"
+            matBadgeColor="warn"
+          >
+            <mat-icon>shopping_cart</mat-icon>
+            Cart
+          </a>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

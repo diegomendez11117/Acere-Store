@@ -1,10 +1,17 @@
 import { Component } from '@angular/core';
+import { AutoLogoutService } from './core/services/auto-logout.service';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: '<router-outlet></router-outlet>',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Acere Store';
+  
+  constructor(){    
+  }
+
+  ngOnInit() {
+    
+  }
 }
